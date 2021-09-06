@@ -1,0 +1,108 @@
+html {
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to right, #66ffff 0%, #ffcccc 62%);    
+}
+
+.calculator{
+    background: whitesmoke;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+
+
+}
+
+.calculator-display{
+    background: black;
+    color: #FFE3E3;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1{
+    margin: 0;
+    padding: 25px;
+    font-size: 85px;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-weight: 300;
+    overflow-x: auto;
+}
+/* ? Custom ScrollBar      */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /*? Calculator Buttons */
+
+  .calculator-buttons {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 10px;
+      padding: 10px;
+  }
+  button {
+    min-height: 50px;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 50px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #FFA0A0;
+  }
+  button:hover {
+      filter: brightness(110%);
+  }
+  button:active {
+      transform: translateY(3px);
+  }
+
+  button:focus {
+      outline: none;
+  }
+  .operator{
+      background: #628395;
+      color:white;
+      font-size: 65px;
+  }
+  .clear{
+      background: #93D9A3;
+      color: white;
+  }
+  .equal-sign{
+      grid-column: -2;
+      grid-row: 2/ span 4;
+      background:#262A53; 
+
+  }
+
+  @media screen and (max-width:600px){
+      .calculator{
+          width: 95%;
+      }
+  }
